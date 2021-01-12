@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mon Portfolio</title>
+        <link rel="icon" href="images/icone.png" type="image/icon">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+
+        <header class="header" id="header">
+
+            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+
+            <a href="#" id="burger">
+
+                <span class="menu"></span>
+                <span class="menu"></span>
+                <span class="menu"></span>
+            </a>
+        
+            <nav class="nav" id="nav">
+
+                <ul>
+                    <li><a href="#apropos">À propos</a></li>
+                    <li><a href="#realisations">Réalisations</a></li>
+                    <li><a href="#competences">Compétences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+            </nav>
+      
+        </header>
+
+        <main class="main">
+          
+            <section class="accueil" id="accueil">
+
+                <img src="images/image.png" alt="">
+
+            </section> 
+
+            
+            <section class="apropos" id="apropos">
+
+                <h3>À propos de moi</h3>
+                
+                <div class="text">
+                    <h4>Je m'appelle Nino Iufa. Je suis une développeuse web et web mobile basée à 
+                            Marseille. 
+                            Passionné par ce metier, j’ai décidée de m’integer dans un formation développeur web chez Simplon  Paca (juin 2020 - février 2021).
+                            j'aime expérimenter, découvrir et apprendre 
+                            des nouvelles technologies.  
+                            Curieuse et motivée, mon objectif est de rejoindre une 
+                            équipe dynamique au sein de laquelle je pourrais montrer mes compétences et enrichir
+                            mon expérience.
+                    </h4>
+                </div>
+                
+            </section>    
+
+
+            <section class="realisations" id="realisations">
+
+                <h3>Mes réalisations</h3>
+
+                <div class="articles">
+
+                    <div class="article1">
+                        <article>
+                            <a href=""><img src="" alt="Le poney fringant"></a>
+                            <h5>Le poney fringant</h5>
+                        </article>
+                    </div>    
+
+                    <div class="article2">
+                        <article>
+                            <a href=""><img src="images/actutu.png" alt="Actutu"></a>
+                            <h5>Actutu</h5>
+                        </article>
+                    </div>    
+
+                    <div class="article3">
+                        <article>
+                            <a href=""><img src="" alt="App météo"></a>
+                            <h5>App météo</h5>
+                        </article>
+                    </div>    
+
+                    <div class="article4">
+                        <article>
+                            <a href=""><img src="images/manette.png" alt="La manette Nintendo NES"></a>
+                            <h5>La manette Nintendo NES</h5>
+                        </article>
+                    </div>    
+
+                    <div class="article5">
+                        <article>
+                            <a href=""><img src="images/nucleotic.png" alt="Nucleotic"></a>
+                            <h5>Nucleotic</h5>
+                        </article>
+                    </div>
+                
+                    <div class="article6">
+                        <article>
+                            <a href=""><img src="images/egghead.png" alt="Egghead"></a>
+                            <h5>Egghead</h5>
+                        </article>
+                    </div>    
+
+                </div>
+
+            </section>
+
+
+            <section class="competences" id="competences">
+                
+                <h3>Mes compétences</h3>
+
+                <div class="competence">
+
+                </div>
+
+            </section>
+
+
+            <section class="contact" id="contact">
+
+                <h3>Me contacter </h3>
+
+                <form class="form" action="http://localhost:9000/backend/contact.php" method="POST">
+
+                    <label for="nom">Nom<sup>*</sup></label>
+                    <input type="text" name="nom" id="nom" placeholder="Saisir votre nom" required size="30">
+                    <label for="tel">Numéro de téléphone</label>
+                    <input type="tel" name="tel" id="tel" pattern="[0-9]{10}" placeholder="Saisir votre numéro de téléphone" >
+                    <label for="email">E-mail<sup>*</sup></label>
+                    <input type="email" name="email" id="email" placeholder="Saisir votre e-mail" required size="30">
+                    <label for="message" id="message">Message<sup>*</sup></label>
+                    <textarea name="message" id="message" maxlength="500" placeholder="Saisir votre message" required></textarea>
+                    <button type="submit" id="bouton">Envoyer</button>
+
+                </form>
+
+            </section>
+
+        </main>
+
+        <footer class="footer">
+
+            <ul>
+                <li><a href="" id="link"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="" id="git"><i class="fa fa-github"></i></a></li>
+            </ul>
+
+            <ul>
+                <li><i class="fa fa-envelope"></i> iufanino1@gmail.com</li>
+                <li><i class="fa fa-phone"></i> 07 53 18 40 61</li>
+                <li><i class="fa fa-map-marker"></i> Marseille</li>
+            </ul>
+
+            <a href="images/cv.pdf" download="Mon CV" class="cv"><i class="fa fa-file"></i> Télécharger CV</a>
+
+            <a href="#header" id="chevron"><i class="fa fa-chevron-up"></i></a>
+
+        </footer>
+
+      <script src="scripts/main.js"></script>
+     
+    </body>
+
+</html>
