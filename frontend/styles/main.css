@@ -13,6 +13,8 @@ body,html{
 }
 
 .header{
+    position: fixed;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -40,7 +42,9 @@ body,html{
     width: 50px;
     height: 30px;
     margin: 20px;
-
+    position: absolute;
+    top: 4;
+    left: 85%
 }
 #burger .menu{
     height: 6px;
@@ -53,7 +57,7 @@ body,html{
     background: #C9ADA7;
 }
 .nav{
-    width: calc(100% - 70px);
+    width: 100%;
 }
 
 .nav ul{
@@ -98,6 +102,7 @@ body,html{
     height: calc(100vh - 70px);
     width: 100%;
     background: #C9ADA7;
+    margin-top: 70px;
 }
 
 .accueil img{
@@ -115,7 +120,7 @@ body,html{
 
 .apropos{
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 70px);
     background: #4a4e69 /*#C9ADA7 #9a8C98;*/;
     display: flex;
     flex-direction: column;
@@ -125,8 +130,8 @@ body,html{
 }
 
 .apropos h3{
-    padding: 3%;
-    margin: 2%;
+    padding: 3% 0 5% 0;
+    
 }
 
 .text{
@@ -149,7 +154,7 @@ body,html{
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 100vh;
+    height: calc(100vh - 70px);
     width: 100%;
     background: #9a8C98;
     justify-content: center;
@@ -178,9 +183,6 @@ article{
     transition: all 0.5s ease-in-out;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     width: 70%;
     height: 70%;
     box-shadow: inset 7px 7px 13px #776c75, inset -7px -7px 13px #bdacbb;
@@ -232,7 +234,7 @@ article:hover{
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 100vh;
+    height: calc(100vh - 70px);
     width: 100%;
     background: #a38983;
     justify-content: center;
@@ -403,33 +405,164 @@ button:active{
 
 
 
-
-
-
 @media  screen and (max-width: 1000px){
+    .footer{
+        height: 70px;
+    }
+    #link, #git{
+        font-size: 1.1em;
+        box-shadow: -4px -4px 12px #1a1a2d, 4px 4px 12px #2a2a49;
+    }
+    #chevron{
+        font-size: 0.8em;
+        box-shadow: -4px -4px 12px #1a1a2d, 4px 4px 12px #2a2a49;
+    }
+    .footer ul:nth-child(2n+0) li:nth-child(1n+0), .footer .cv{
+        font-size: 0.6em;
+        box-shadow: -4px -4px 12px #1a1a2d, 4px 4px 12px #2a2a49;
+    }
+    #link:hover, #git:hover, #chevron:hover, .footer .cv:hover, .footer ul:nth-child(2n+0) li:nth-child(1n+0):hover{
+        box-shadow: -2px -2px 5px #2a2a49, 2px 2px 5px #1a1a2d;
+    }    
+
+}
+
+@media  screen and (max-width: 800px){
     .nav{
        display: none;
     }
     #burger{
        display: flex;
     }
-    #nav{
+    .nav{
     flex-direction: column;
-    align-items: center;
     }
-    #nav ul{
+    .nav ul{
         flex-direction: column; 
-        width: 100%;
+        width: 25%;
     }
-    #nav ul li{
-        width: 100%;
+    .nav ul li{
         text-align: center;
+        padding: 15px 0;
+        background: #bda39d;
     }
-    #nav ul li a{
-        padding: 5px;
-        width: 100%;
+    .nav ul li a{
+        color: #636991;
+    }
+    .header:hover ul li a{
+        color: #636991;
+    }
+    .nav ul li:hover {
+        background: #5a5f81;
+    }
+    .nav ul li:hover a{
+        color: #C9ADA7;
     }
     #nav.active{
-        display: flex ;
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 75%;
+    }
+
+    .accueil img{
+        box-shadow:  -20px -20px 40px #ab938e, 20px 20px 40px #e7c7c0;
+    }
+    
+    .apropos{
+        height: auto;
+    }
+    .text{
+        margin-bottom: 40px;
+    }
+
+
+    .articles{
+        grid-template:repeat(3,1fr) / repeat(12, 1fr);
+        width: 90%;
+        height: 80%;
+    }
+    .article1{
+        grid-area: 1 / 1 / 2 / 7;
+    }
+    .article2{
+        grid-area: 1 / 7 / 2 / 13;
+    }
+    .article3{
+        grid-area: 2 / 1 / 3 / 7;
+    }
+    .article4{
+        grid-area: 2 / 7 / 3 / 13;
+    }
+    .article5{
+        grid-area: 3 / 1 / 4 / 7;
+    }
+    .article6{
+        grid-area: 3 / 7 / 4 / 13;
+    }
+    .articles a{
+        margin-left: 5%;
+        width: 90%;
+        height: 70%;
+    }
+    .articles img{
+        border-radius: 15px;
+        margin: 2%;
+    }
+    .articles h5{
+        padding: 2%;
+    }
+
+    .form{
+        box-shadow: -10px -10px 25px #bec1ca, 10px 10px 25px #f1f1f1;
+    }
+    .form:hover{
+        box-shadow: -7px -7px 15px#f1f1f1, 7px 7px 15px  #bec1ca
+    }
+
+    .footer{
+        height: 60px;
+    }
+    #link, #git{
+        font-size: 1em;
+        box-shadow: -3px -3px 10px #1a1a2d, 3px 3px 10px #2a2a49;
+    }
+    #chevron{
+        font-size: 0.7em;
+        box-shadow: -3px -3px 10px #1a1a2d, 3px 3px 10px #2a2a49;
+    }
+    .footer ul:nth-child(2n+0) li:nth-child(1n+0), .footer .cv{
+        font-size: 0.5em;
+        box-shadow: -3px -3px 10px #1a1a2d, 3px 3px 10px #2a2a49;
+    } 
+    #link:hover, #git:hover, #chevron:hover, .footer .cv:hover, .footer ul:nth-child(2n+0) li:nth-child(1n+0):hover{
+        box-shadow: -2px -2px 4px #2a2a49, 2px 2px 4px #1a1a2d;
+    }   
+}
+
+@media  screen and (max-width: 715px){
+    .footer{
+        height: 50px;
+    }
+    #link, #git{
+        font-size: 0.8em;
+        box-shadow: -2px -2px 8px #1a1a2d, 2px 2px 8px #2a2a49;
+    }
+    #chevron{
+        font-size: 0.5em;
+        box-shadow: -2px -2px 8px #1a1a2d, 2px 2px 8px #2a2a49;
+    }
+    .footer ul:nth-child(2n+0) li:nth-child(1n+0), .footer .cv{
+        font-size: 0.35em;
+        box-shadow: -2px -2px 8px #1a1a2d, 2px 2px 8px #2a2a49;
+    } 
+    #link:hover, #git:hover, #chevron:hover, .footer .cv:hover, .footer ul:nth-child(2n+0) li:nth-child(1n+0):hover{
+        box-shadow: -1px -1px 3px #2a2a49, 1px 1px 3px #1a1a2d;
+    } 
+}
+
+@media  screen and (max-width: 600px){
+    .footer{
+        display: none;
     }
 }

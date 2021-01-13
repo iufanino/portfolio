@@ -1,13 +1,20 @@
 //  Menu Burger
 const menuBurger = document.getElementById("burger");
 const navbar = document.getElementById("nav");
-
-
+const navMenu = document.getElementsByClassName("navmenu");
 
 menuBurger.addEventListener('click',()=>{ 
     navbar.classList.toggle('active');
 }) 
 
+for (i = 0; i < navMenu.length; i++) {
+
+navMenu[i].addEventListener('click',()=>{
+    
+    navbar.classList.toggle('active');
+})
+
+}
 
 
 /*   Validation de formulaire
