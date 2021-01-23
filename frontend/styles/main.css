@@ -179,7 +179,6 @@ body,html{
     align-items: center;
 }
 .articles article{
-    background: #9a8C98;
     transition: all 0.5s ease-in-out;
     display: flex;
     flex-direction: column;
@@ -279,6 +278,12 @@ body,html{
     margin: 5%;
     box-shadow: inset -3px -3px 8px #8b746f, inset 3px 3px 8px #bb9e97;
 }
+/*.outils-logiciels img{
+    width: 95%;
+    height: 95%;
+    border-radius: 10px;
+    margin: 0;
+}*/
 .langages-framework h4{
     grid-area: 1 / 4 / 2 / 10;
 }

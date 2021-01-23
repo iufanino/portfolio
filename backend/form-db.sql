@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `utilisateurs`(
   `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL ,
   `nom` VARCHAR(50) NOT NULL,
   `tel` VARCHAR(15) NULL,
-  `email` VARCHAR(50) UNIQUE NOT NULL,
+  `email` VARCHAR(50) NOT NULL,
   `message` text  NOT NULL
 ) ENGINE=InnoDB; 
 

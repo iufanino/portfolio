@@ -17,8 +17,8 @@ navMenu[i].addEventListener('click',()=>{
 }
 
 
-/*   Validation de formulaire
-const formValid = document.getElementById('bouton');
+
+/*const formValid = document.getElementById('bouton');
 const nom = document.getElementById('nom');
 const tel = document.getElementById('tel');
 const email = document.getElementById('email');
@@ -63,6 +63,6 @@ if (comment.value == "")
         return false; 
     } 
     return true; 
-}*/
-
+}
+*/
 
