@@ -2,12 +2,22 @@
 <html lang="fr">
 
     <head>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mon Portfolio</title>
         <link rel="icon" href="images/icone.png" type="image/icon">
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="scripts/main.js"defer></script>
+        <script src="scripts/script.js" defer></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init("user_a9RY38aDXn0Nve1sN3Fvz");
+            })();
+        </script>
+
     </head>
 
     <body>
@@ -74,43 +84,43 @@
 
                     <div class="article1">
                         <article>
-                            <img src="" alt="Le poney fringant">
-                            <a href="">Poney fringant</a>
+                            <img src="images/realisations/poney-fringant.png" alt="Le poney fringant">
+                            <a href="" target="_blank">Poney fringant</a>
                         </article>
                     </div>    
 
                     <div class="article2">
                         <article>
                             <img src="images/realisations/actutu.png" alt="Actutu">
-                            <a href="">Actutu</a>
+                            <a href="https://iufanino-actutu.netlify.app/" target="_blank">Actutu</a>
                         </article>
                     </div>    
 
                     <div class="article3">
                         <article>
-                            <img src="" alt="App météo">
-                            <a href="">App météo</a>
+                            <img src="images/realisations/app-meteo.png" alt="App météo">
+                            <a href="https://iufanino-meteo.netlify.app/" target="_blank">App météo</a>
                         </article>
                     </div>    
 
                     <div class="article4">
                         <article>
                             <img src="images/realisations/manette.png" alt="La manette Nintendo NES">
-                            <a href="">La manette</a>
+                            <a href="https://iufanino-manette-nes.netlify.app/" target="_blank">La manette</a>
                         </article>
                     </div>    
 
                     <div class="article5">
                         <article>
                             <img src="images/realisations/nucleotic.png" alt="Nucleotic">
-                            <a href="">Nucleotic</a>
+                            <a href="https://iufanino-nucleotic.netlify.app/" target="_blank">Nucleotic</a>
                         </article>
                     </div>
                 
                     <div class="article6">
                         <article>
                             <img src="images/realisations/egghead.png" alt="Egghead">
-                            <a href="">Egghead</a>
+                            <a href="https://iufanino-egghead.netlify.app/" target="_blank">Egghead</a>
                         </article>
                     </div>    
 
@@ -282,8 +292,9 @@
 
                 <h3>Me contacter </h3>
 
-                <form class="form" action="http://back.portfolio.local:9095/contact.php" method="POST">
+                <form class="form" id="contact-form">
 
+                    <input type="hidden" name="contact_number">
                     <label for="nom">Nom<sup>*</sup></label>
                     <input type="text" name="nom" id="nom" placeholder="Saisir votre nom" required size="30">
                     <label for="tel">Numéro de téléphone</label>
@@ -292,7 +303,7 @@
                     <input type="email" name="email" id="email" placeholder="Saisir votre e-mail" required size="30">
                     <label for="message" id="message">Message<sup>*</sup></label>
                     <textarea name="message" id="message" maxlength="500" placeholder="Saisir votre message" required></textarea>
-                    <button type="submit" id="bouton">Envoyer</button>
+                    <button id="bouton" type="submit" value="Send" >Envoyer</button>
 
                 </form>
 
@@ -303,8 +314,8 @@
         <footer class="footer">
 
             <ul>
-                <li><a href="" id="link"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="" id="git"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/iufanino/" target="_blank" id="link"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/iufanino" target="_blank" id="git"><i class="fa fa-github"></i></a></li>
             </ul>
 
             <ul>
@@ -313,14 +324,12 @@
                 <li><i class="fa fa-map-marker"></i> Marseille</li>
             </ul>
 
-            <a href="images/cv.iufanino.pdf" download="Mon CV"  target="_blank" class="cv"><i class="fa fa-file"></i> Télécharger CV</a>
+            <a href="images/iufanino.cv.pdf" download="Mon CV"  target="_blank" class="cv"><i class="fa fa-file"></i> Télécharger CV</a>
 
             <a href="index.html" id="chevron"><i class="fa fa-chevron-up"></i></a>
 
         </footer>
-
-      <script src="scripts/main.js"></script>
-     
+      
     </body>
 
 </html>

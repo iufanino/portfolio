@@ -14,14 +14,13 @@ body,html{
 
 .header{
     position: fixed;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     height: 70px;
     background: #bda39d;
-
+    transition: all 0.7s ease-in-out;
 }
 
 .header:hover{
@@ -111,7 +110,7 @@ body,html{
     border-radius: 50px;
     background: #C9ADA7;
     box-shadow:  -30px -30px 60px #ab938e, 30px 30px 60px #e7c7c0;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.7s ease-in-out;
 }
 
 .accueil img:hover{
@@ -371,6 +370,7 @@ body,html{
 }
 
 .form{
+    transition: all 0.7s ease-in-out;
     width: 60%;
     height: auto;
     text-align: center;
@@ -379,7 +379,7 @@ body,html{
     font-size: 15px;
     background:#e0e3ee;
     box-shadow: -12px -12px 30px #bec1ca, 12px 12px 30px #f1f1f1;
-    transition: all 0.5s ease-in-out;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;

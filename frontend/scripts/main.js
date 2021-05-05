@@ -16,9 +16,10 @@ navMenu[i].addEventListener('click',()=>{
 
 }
 
+////////////////////////////////////////////////////
 
 
-/*const formValid = document.getElementById('bouton');
+const formValid = document.getElementById('bouton');
 const nom = document.getElementById('nom');
 const tel = document.getElementById('tel');
 const email = document.getElementById('email');
@@ -56,7 +57,7 @@ if (email.value.indexOf(".", 0) < 0)
         return false; 
     } 
 
-if (comment.value == "")                  
+if (message.value == "")                  
     { 
         alert("Écrivez un message."); 
         comment.focus(); 
@@ -64,5 +65,5 @@ if (comment.value == "")
     } 
     return true; 
 }
-*/
+
 
